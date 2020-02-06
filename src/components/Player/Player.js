@@ -10,7 +10,7 @@ const Player = (props) => (
         <td className="Player__score">{props.score}</td>
         <td className="Player__button_set">
             <Button color='secondary' className="Player__button" onClick={() => props.onPlayerScoreChange(1)}>+</Button>
-            <Button color='secondary' className="Player__button" onClock={() => props.onPlayerScoreChange(-1)}>-</Button>
+            <Button color='secondary' className="Player__button" onClick={() => props.onPlayerScoreChange(-1)}>-</Button>
         </td>    
     </th>
 );
