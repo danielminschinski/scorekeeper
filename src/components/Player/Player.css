@@ -1,0 +1,15 @@
+button {
+    margin-left: .75rem !important;
+}
+
+.Player__button_set {
+    text-align: end;
+}
+
+td {
+    vertical-align: middle;
+    
+}
+.Player__score {
+    padding: 10px;
+}
