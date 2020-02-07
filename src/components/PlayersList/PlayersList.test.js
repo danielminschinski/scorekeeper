@@ -34,7 +34,7 @@ it('should call onScoreUpdate if score is changed', () => {
             score: 5
         },
         {
-            name: 'Antoś',
+            name: 'Antoni',
             score: 0
         }
     ]
@@ -45,4 +45,25 @@ it('should call onScoreUpdate if score is changed', () => {
     const onPlayerScoreChange = firstPlayer.prop('onPlayerScoreChange');
     onPlayerScoreChange(10);
     expect(mockedOnScoreUpdate).toBeCalledWith(0, 10);
+});
+
+it('should call onPlayerRemove if a player is removed', () => {
+    const players = [
+        {
+            name: 'Kunegunda',
+            score: 5
+        },
+        {
+            name: 'Antoni',
+            score: 0
+        }
+    ]
+
+    const mockedOnPlayerRemove = jest.fn();
+    const playerComponent = shallow(<PlayersList players={players} onPlayerRemove={mockedOnPlayerRemove} />);
+    const firstPlayer = playerComponent.find(Player).first();
+    const onPlayerRemove = firstPlayer.prop('onPlayerRemove');
+    onPlayerRemove();
+
+    expect(mockedOnPlayerRemove).toBeCalledWith(0);
 })

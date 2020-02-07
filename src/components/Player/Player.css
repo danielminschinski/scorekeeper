@@ -1,15 +1,8 @@
-button {
-    margin-left: .75rem !important;
+.Player {
+	font-size: 30px;
 }
 
-.Player__button_set {
-    text-align: end;
-}
-
-th {
-    vertical-align: middle;
-    
-}
-.Player__score {
-    padding: 10px;
+.Player>* {
+	padding: 0 10px;
+	border: 1px solid grey;
 }
