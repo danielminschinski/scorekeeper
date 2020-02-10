@@ -60,7 +60,7 @@ it('should remove player after onPlayerRemove callback', () => {
 	appComponent.setState( { players });
 
 	const onPlayerRemove = appComponent.find(PlayersList).prop('onPlayerRemove');
-	onPlayerRemove(0, 5);
+	onPlayerRemove(0);
 
 	const updatedPlayers = appComponent.state('players');
 
